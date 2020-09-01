@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+tr:hover{
+  background:#8b8f91;
+}
+
+form {
+  margin: 10px;
+}

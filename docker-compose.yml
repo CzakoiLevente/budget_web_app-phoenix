@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  phoenix-database:
+    container_name: phoenix-database
+    build: ./database-container
+    ports:
+      - 21000:3306
+    volumes:
+      - /home/lcd/projects/phoenix-database-vol:/var/lib/mysql
+    restart: unless-stopped
+
+  phoenix-app:
+    container_name: phoenix-app
+    build: ./app-container
+    ports:
+     - 30000:30000
+    restart: unless-stopped
